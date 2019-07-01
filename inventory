@@ -1,0 +1,32 @@
+[test-routers]
+student01-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #01' inventory_ip='ip address 172.16.82.150 255.255.255.0'
+student02-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #02' inventory_ip='ip address 172.16.82.151 255.255.255.0'
+
+[student-routers]
+student03-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #03' inventory_ip='ip address 172.16.82.152 255.255.255.0'
+student04-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #04' inventory_ip='ip address 172.16.82.153 255.255.255.0'
+student05-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #05' inventory_ip='ip address 172.16.82.154 255.255.255.0'
+student06-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #06' inventory_ip='ip address 172.16.82.155 255.255.255.0'
+student07-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #07' inventory_ip='ip address 172.16.82.156 255.255.255.0'
+student08-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #08' inventory_ip='ip address 172.16.82.157 255.255.255.0'
+student09-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #09' inventory_ip='ip address 172.16.82.158 255.255.255.0'
+student10-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #10' inventory_ip='ip address 172.16.82.159 255.255.255.0'
+student11-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #11' inventory_ip='ip address 172.16.82.160 255.255.255.0'
+student12-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #12' inventory_ip='ip address 172.16.82.161 255.255.255.0'
+student13-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #13' inventory_ip='ip address 172.16.82.162 255.255.255.0'
+student14-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #14' inventory_ip='ip address 172.16.82.163 255.255.255.0'
+student15-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #15' inventory_ip='ip address 172.16.82.164 255.255.255.0'
+student16-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #16' inventory_ip='ip address 172.16.82.165 255.255.255.0'
+student17-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #17' inventory_ip='ip address 172.16.82.166 255.255.255.0'
+student18-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #18' inventory_ip='ip address 172.16.82.167 255.255.255.0'
+student19-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #19' inventory_ip='ip address 172.16.82.168 255.255.255.0'
+student20-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #20' inventory_ip='ip address 172.16.82.169 255.255.255.0'
+student21-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #21' inventory_ip='ip address 172.16.82.170 255.255.255.0'
+student22-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #22' inventory_ip='ip address 172.16.82.171 255.255.255.0'
+student23-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #23' inventory_ip='ip address 172.16.82.172 255.255.255.0'
+student24-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #24' inventory_ip='ip address 172.16.82.173 255.255.255.0'
+student25-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #25' inventory_ip='ip address 172.16.82.174 255.255.255.0'
+
+[instructor-routers]
+instructor01-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #26' inventory_ip='ip address 172.16.82.175 255.255.255.0'
+instructor02-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #27' inventory_ip='ip address 172.16.82.176 255.255.255.0'

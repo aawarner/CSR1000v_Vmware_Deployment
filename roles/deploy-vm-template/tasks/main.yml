@@ -1,0 +1,107 @@
+---
+# Deploy CSR1000v from a template using Ansible 'vmware_guest' module
+- name: Deploy VM from template
+  vmware_guest:
+    hostname: '{{ deploy_vsphere_host }}'
+    username: '{{ deploy_vsphere_user }}'
+    password: '{{ deploy_vsphere_password }}'
+    validate_certs: no
+    datacenter: '{{ deploy_vsphere_datacenter }}'
+    folder: '{{ deploy_vsphere_folder }}'
+    name: '{{ inventory_hostname }}'
+    annotation: "{{ guest_notes }}"
+    disk:
+    - size_gb: '{{ guest_disk }}'
+      type: thin
+      datastore: '{{ deploy_vsphere_datastore }}'
+    hardware:
+      memory_mb: '{{ guest_memory }}'
+      num_cpus: '{{ guest_vcpu }}'
+    template: '{{ guest_template }}'
+    wait_for_ip_address: no
+  delegate_to: localhost
+
+# Bootstrap CSR1000v using vApp properties
+- name: Update vApp Properties
+  vmware_guest:
+    hostname: '{{ deploy_vsphere_host }}'
+    username: '{{ deploy_vsphere_user }}'
+    password: '{{ deploy_vsphere_password }}'
+    name: '{{ inventory_hostname }}'
+    state: present
+    validate_certs: no
+    vapp_properties:
+      - id: com.cisco.csr1000v.hostname.1
+        type: string
+        value: '{{ inventory_hostname }}'
+      - id: com.cisco.csr1000v.domain-name.1
+        type: string
+        value: lab.local
+      - id: com.cisco.csr1000v.login-username.1
+        type: string
+        value: cisco
+      - id: com.cisco.csr1000v.login-password.1
+        type: password
+        value: cisco
+      - id: com.cisco.csr1000v.privilege-password.1
+        type: password
+        value: cisco
+      - id: com.cisco.csr1000v.license.1
+        type: string
+        value: ax
+      - id: com.cisco.csr1000v.ios-config-0001.1
+        type: string
+        value: line vty 0 4
+      - id: com.cisco.csr1000v.ios-config-0002.1
+        type: string
+        value: login local
+      - id: com.cisco.csr1000v.ios-config-0003.1
+        type: string
+        value: transport input ssh
+      - id: com.cisco.csr1000v.ios-config-0004.1
+        type: string
+        value: crypto key generate rsa modulus 4096
+      - id: com.cisco.csr1000v.ios-config-0005.1
+        type: string
+        value: vrf definition mgmt-intf
+      - id: com.cisco.csr1000v.ios-config-0006.1
+        type: string
+        value: address-family ipv4
+      - id: com.cisco.csr1000v.ios-config-0007.1
+        type: string
+        value: interface GigabitEthernet1
+      - id: com.cisco.csr1000v.ios-config-0008.1
+        type: string
+        value: vrf forwarding mgmt-intf
+      - id: com.cisco.csr1000v.ios-config-0009.1
+        type: string
+        value: '{{ inventory_ip }}'
+      - id: com.cisco.csr1000v.ios-config-0010.1
+        type: string
+        value: no shutdown
+      - id: com.cisco.csr1000v.ios-config-0011.1
+        type: string
+        value: ip route vrf mgmt-intf 0.0.0.0 0.0.0.0 172.16.82.1
+      - id: com.cisco.csr1000v.ios-config-0012.1
+        type: string
+        value: restconf
+      - id: com.cisco.csr1000v.ios-config-0013.1
+        type: string
+        value: netconf ssh
+      - id: com.cisco.csr1000v.ios-config-0014.1
+        type: string
+        value: netconf-yang
+  delegate_to: localhost
+
+# Power on CSR1000v
+- name: Set the state of a virtual machine to poweron
+  vmware_guest_powerstate:
+    hostname: "{{ deploy_vsphere_host }}"
+    username: "{{ deploy_vsphere_user }}"
+    password: "{{ deploy_vsphere_password }}"
+    validate_certs: no
+    folder: "/{{ deploy_vsphere_datacenter }}/{{ deploy_vsphere_folder }}"
+    name: "{{ inventory_hostname }}"
+    state: powered-on
+  delegate_to: localhost
+  register: deploy

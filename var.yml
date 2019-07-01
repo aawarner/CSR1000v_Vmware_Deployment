@@ -1,0 +1,14 @@
+# Infrastructure
+# - Defines the vCenter / vSphere environment
+deploy_vsphere_host: '172.16.82.10'
+deploy_vsphere_user: 'username'
+deploy_vsphere_password: 'password'
+deploy_vsphere_datacenter: 'Datacenter'
+deploy_vsphere_folder: '/ANSIBLE'
+
+# Guest
+# - Describes virtual machine common options
+guest_memory: '4096'
+guest_vcpu: '1'
+guest_disk: '8'
+guest_template: 'csr1000v'
