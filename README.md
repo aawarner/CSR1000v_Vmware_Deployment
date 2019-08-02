@@ -3,24 +3,60 @@
 Ansible playbook to deploy a single or multiple CSR1000v's
 from a template on ESXi through Vmware vCenter.
 
-There are two playbooks in this tooling. One to deploy the
+There are two playbooks in this tooling. One to deploy
 CSR1000v's from the inventory file and one to undeploy them.
 
-Each playbook has it's own associated role. The roles utilize
-the "vmware_guest" Ansible module.
 
+* [Requirement](#requirements)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Contributing](#contributing)
 
+## Requirements
+
+This role requires the vmware_guest module and Ansible 2.8.
+
 ## Setup
 
-Modify var.yml with appropriate information to define Vmware
-environment and CSR1000v common options. The "deploy-vm-template"
-role contains common bootstrap properties for each CSR1000v. The CSR1000v
-is bootstrapped using vApp properties. In this configuration each CSR1000v
-is bootstrapped for programmability. NETCONF, RESTCONF, and SSH are bootstrapped
+The "deploy-vm-template" role contains common bootstrap properties for each CSR1000v.
+Each CSR1000v is bootstrapped using vApp properties. In this example each CSR1000v
+is bootstrapped for programmability training. NETCONF, RESTCONF, and SSH are bootstrapped
 along with a user/pass of cisco/cisco.
+
+### Inventory
+
+Look inside the example inventory file and update parameters as appropriate.
+Configurable parameters include:
+
+*`hostname`*\
+*`deploy_vsphere_datastore`*\
+*`guest_notes`*\
+*`inventory_ip`*
+
+### Role Variables
+
+The "deploy-vm-template" role accepts various variables including:
+
+#### Vmware vCenter Environment
+
+*`deploy_vsphere_host`*\
+*`deploy_vsphere_user`*\
+*`deploy_vsphere_password`*\
+*`deploy_vsphere_datacenter`*\
+*`deploy_vsphere_folder`*
+
+#### CSR1000v Common Configuration
+
+*`guest_memory`*\
+*`guest_vcpu`*\
+*`guest_disk`*\
+*`guest_template`*\
+*`router_gateway`*\
+*`port_group1`*\
+*`port_group2`*\
+*`port_group3`*
+
+These variables can be found and modified in var.yml.
 
 ## Usage
 
