@@ -17,6 +17,10 @@
     hardware:
       memory_mb: '{{ guest_memory }}'
       num_cpus: '{{ guest_vcpu }}'
+    networks:
+    - name: '{{ port_group1 }}'
+    - name: '{{ port_group2 }}'
+    - name: '{{ port_group3 }}'
     template: '{{ guest_template }}'
     wait_for_ip_address: no
   delegate_to: localhost
@@ -81,7 +85,7 @@
         value: no shutdown
       - id: com.cisco.csr1000v.ios-config-0011.1
         type: string
-        value: ip route vrf mgmt-intf 0.0.0.0 0.0.0.0 172.16.82.1
+        value: ' {{ router_gateway }}'
       - id: com.cisco.csr1000v.ios-config-0012.1
         type: string
         value: restconf

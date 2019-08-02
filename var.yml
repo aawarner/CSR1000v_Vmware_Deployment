@@ -1,6 +1,6 @@
 # Infrastructure
 # - Defines the vCenter / vSphere environment
-deploy_vsphere_host: '172.16.82.10'
+deploy_vsphere_host: '10.10.10.10'
 deploy_vsphere_user: 'username'
 deploy_vsphere_password: 'password'
 deploy_vsphere_datacenter: 'Datacenter'
@@ -12,3 +12,7 @@ guest_memory: '4096'
 guest_vcpu: '1'
 guest_disk: '8'
 guest_template: 'csr1000v'
+router_gateway: 'ip route vrf mgmt-intf 0.0.0.0 0.0.0.0 10.10.10.1'
+port_group1: 'csr-lab'
+port_group2: 'csr-lab'
+port_group3: 'csr-lab'
