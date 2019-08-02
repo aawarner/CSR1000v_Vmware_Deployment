@@ -13,7 +13,7 @@ the "vmware_guest" Ansible module.
 * [Usage](#usage)
 * [Contributing](#contributing)
 
-##Setup
+## Setup
 
 Modify var.yml with appropriate information to define Vmware
 environment and CSR1000v common options. The "deploy-vm-template"
@@ -22,7 +22,7 @@ is bootstrapped using vApp properties. In this configuration each CSR1000v
 is bootstrapped for programmability. NETCONF, RESTCONF, and SSH are bootstrapped
 along with a user/pass of cisco/cisco.
 
-##Usage
+## Usage
 
 Deploy all routers in inventory
 ```
