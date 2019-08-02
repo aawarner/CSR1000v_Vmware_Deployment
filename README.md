@@ -35,7 +35,7 @@ Configurable parameters include:
 
 ### Role Variables
 
-The "deploy-vm-template" role accepts various variables including:
+The "deploy-vm-template" and the "destroy-vm" role accept various variables including:
 
 #### Vmware vCenter Environment
 
