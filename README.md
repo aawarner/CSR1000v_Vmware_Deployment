@@ -25,7 +25,8 @@ along with a user/pass of cisco/cisco.
 
 ### Inventory
 
-Look inside the example inventory file and update parameters as appropriate.
+Look inside the example inventory file and update parameters as appropriate. The parameters in
+the inventory file are unique variables for each router.
 Configurable parameters include:
 
 *`hostname`*\
