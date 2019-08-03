@@ -14,7 +14,8 @@ CSR1000v's from the inventory file and one to undeploy them.
 
 ## Requirements
 
-This role requires the vmware_guest module and Ansible 2.8.
+This role requires the vmware_guest module and Ansible 2.8. Tested environment consisted of ESXi 6.5
+and vCenter 6.5.
 
 ## Setup
 
