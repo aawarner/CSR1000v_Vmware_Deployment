@@ -1,3 +1,5 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/aawarner/CSR1000v_Vmware_Deployment)
+
 # CSR1000v Deployment Tool
 
 Ansible playbook to deploy a single or multiple CSR1000v's
