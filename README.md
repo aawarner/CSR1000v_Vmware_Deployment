@@ -12,6 +12,7 @@ CSR1000v's from the inventory file and one to undeploy them.
 * [Requirements](#requirements)
 * [Setup](#setup)
 * [Usage](#usage)
+* [Demo](#demo)
 * [Contributing](#contributing)
 
 ## Requirements
@@ -79,6 +80,8 @@ Undeploy routers
 ```
 ansible-playbook -i inventory undeploy-pods.yml
 ```
+## Demo
+![Deploy CSR1000v Demo](demo/deploy_csr1.gif)
 
 ## Contributing
 See [CONTRIBUTING](./CONTRIBUTING.md)
