@@ -91,6 +91,7 @@ ansible-playbook -i inventory undeploy-pods.yml
 ### Destroy CSR1000v's
 
 ![Undeploy CSR1000v Demo](demo/undeploy_csr.gif)
+![Alt Text](https://drive.google.com/file/d/1SykMVu-3ae-DU9gbygq3CzE7Jqb2dhQn/view?usp=sharing)
 
 ## Contributing
 See [CONTRIBUTING](./CONTRIBUTING.md)
