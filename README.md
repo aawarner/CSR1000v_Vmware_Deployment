@@ -81,8 +81,15 @@ Undeploy routers
 ansible-playbook -i inventory undeploy-pods.yml
 ```
 ## Demo
+
+### Deploy CSR1000v's
+
 ![Deploy CSR1000v Demo](demo/deploy_csr1.gif)
 ![Deploy CSR1000v Demo1](demo/deploy_csr2.gif)
+![Deploy CSR1000v Demo2](demo/deplly_csr3.gif)
+
+### Destroy CSR1000v's
+
 ![Undeploy CSR1000v Demo](demo/undeploy_csr.gif)
 
 ## Contributing
