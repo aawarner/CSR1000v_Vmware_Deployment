@@ -84,14 +84,13 @@ ansible-playbook -i inventory undeploy-pods.yml
 
 ### Deploy CSR1000v's
 
-![Deploy CSR1000v Demo](demo/deploy_csr1.gif)
-![Deploy CSR1000v Demo1](demo/deploy_csr2.gif)
-![deploy_csr3](https://s3.gifyu.com/images/deploy_csr3.gif)
-![deploy_csr3.gif](https://s3.gifyu.com/images/deploy_csr3.gif)
+[![deploy_csr1.md.gif](https://s3.gifyu.com/images/deploy_csr1.md.gif)](https://gifyu.com/image/EeY3)
+[![deploy_csr2.md.gif](https://s3.gifyu.com/images/deploy_csr2.md.gif)](https://gifyu.com/image/EeYE)
 [![deploy_csr3.md.gif](https://s3.gifyu.com/images/deploy_csr3.md.gif)](https://gifyu.com/image/EeYN)
 
 ### Destroy CSR1000v's
 
-![Undeploy CSR100v](demo/undeploy_csr.gif)
+[![undeploy_csr.md.gif](https://s3.gifyu.com/images/undeploy_csr.md.gif)](https://gifyu.com/image/EeY9)
+
 ## Contributing
 See [CONTRIBUTING](./CONTRIBUTING.md)
