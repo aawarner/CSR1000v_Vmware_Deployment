@@ -1,4 +1,4 @@
-https://travis-ci.com/aawarner/CSR1000v_Vmware_Deployment.svg?branch=master
+[![Build Status](https://travis-ci.com/aawarner/CSR1000v_Vmware_Deployment.svg?branch=master)](https://travis-ci.com/aawarner/CSR1000v_Vmware_Deployment)
 
 [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/aawarner/CSR1000v_Vmware_Deployment)
 
