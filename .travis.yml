@@ -8,7 +8,7 @@ install:
    - "pip install -r requirements.txt"
 
 before_script:
-   -"find . -name '*.yml' | xargs yamllint -s"
+   - "find . -name '*.yml' | xargs yamllint -s"
 
 script:
    # Basic role syntax check
