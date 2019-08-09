@@ -12,5 +12,5 @@ before_script:
 
 script:
    # Basic role syntax check
-   - ansible-playbook -i inventory deploy-pods --syntax-check
-   - ansible-playbook -i inventory undeploy-pods --syntax-check
+   - ansible-playbook -i inventory deploy-pods.yml --syntax-check
+   - ansible-playbook -i inventory undeploy-pods.yml --syntax-check
