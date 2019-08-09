@@ -4,4 +4,4 @@
   vars_files:
     - var.yml
   roles:
-     - destroy-vm
+    - destroy-vm

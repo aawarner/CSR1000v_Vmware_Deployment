@@ -1,3 +1,4 @@
+---
 # Infrastructure
 # - Defines the vCenter / vSphere environment
 deploy_vsphere_host: '10.10.10.10'

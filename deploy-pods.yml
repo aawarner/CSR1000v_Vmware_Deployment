@@ -4,4 +4,4 @@
   vars_files:
     - var.yml
   roles:
-     - deploy-vm-template
+    - deploy-vm-template

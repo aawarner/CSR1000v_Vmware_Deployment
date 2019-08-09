@@ -5,24 +5,24 @@
     hostname: '{{ deploy_vsphere_host }}'
     username: '{{ deploy_vsphere_user }}'
     password: '{{ deploy_vsphere_password }}'
-    validate_certs: no
+    validate_certs: false
     datacenter: '{{ deploy_vsphere_datacenter }}'
     folder: '{{ deploy_vsphere_folder }}'
     name: '{{ inventory_hostname }}'
     annotation: "{{ guest_notes }}"
     disk:
-    - size_gb: '{{ guest_disk }}'
-      type: thin
-      datastore: '{{ deploy_vsphere_datastore }}'
+      - size_gb: '{{ guest_disk }}'
+        type: thin
+        datastore: '{{ deploy_vsphere_datastore }}'
     hardware:
       memory_mb: '{{ guest_memory }}'
       num_cpus: '{{ guest_vcpu }}'
     networks:
-    - name: '{{ port_group1 }}'
-    - name: '{{ port_group2 }}'
-    - name: '{{ port_group3 }}'
+      - name: '{{ port_group1 }}'
+      - name: '{{ port_group2 }}'
+      - name: '{{ port_group3 }}'
     template: '{{ guest_template }}'
-    wait_for_ip_address: no
+    wait_for_ip_address: false
   delegate_to: localhost
 
 # Bootstrap CSR1000v using vApp properties
@@ -33,7 +33,7 @@
     password: '{{ deploy_vsphere_password }}'
     name: '{{ inventory_hostname }}'
     state: present
-    validate_certs: no
+    validate_certs: false
     vapp_properties:
       - id: com.cisco.csr1000v.hostname.1
         type: string
@@ -103,7 +103,7 @@
     hostname: "{{ deploy_vsphere_host }}"
     username: "{{ deploy_vsphere_user }}"
     password: "{{ deploy_vsphere_password }}"
-    validate_certs: no
+    validate_certs: false
     folder: "/{{ deploy_vsphere_datacenter }}/{{ deploy_vsphere_folder }}"
     name: "{{ inventory_hostname }}"
     state: powered-on

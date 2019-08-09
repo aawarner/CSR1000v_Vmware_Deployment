@@ -1,0 +1,16 @@
+---
+language: python
+python:
+   - "3.7"
+
+# Install packages
+install:
+   - "pip install -r requirements.txt"
+
+before_script:
+   -"find . -name '*.yml' | xargs yamllint -s"
+
+script:
+   # Basic role syntax check
+   - ansible-playbook -i inventory deploy-pods --syntax-check
+   - ansible-playbook -i inventory undeploy-pods --syntax-check

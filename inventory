@@ -2,6 +2,7 @@
 student01-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #01' inventory_ip='ip address 10.10.10.120 255.255.255.0'
 student02-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #02' inventory_ip='ip address 10.10.10.121 255.255.255.0'
 student03-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #03' inventory_ip='ip address 10.10.10.122 255.255.255.0'
+[student-router1]
 student04-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #04' inventory_ip='ip address 10.10.10.123 255.255.255.0'
 student05-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #05' inventory_ip='ip address 10.10.10.124 255.255.255.0'
 student06-CSR deploy_vsphere_datastore='datastore1' guest_notes='CSR #06' inventory_ip='ip address 10.10.10.125 255.255.255.0'
